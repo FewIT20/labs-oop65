@@ -1,5 +1,3 @@
-package week3;
-
 /**
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
@@ -31,14 +29,6 @@ public class Phone {
     
     public void showBrand() {
         System.out.println("Brand > " + this.brandName);
-    }
-    
-    public static void main(String[] args) {
-        Phone p1 = new Phone();
-        p1.turnOn();
-        p1.call("Peter");
-        p1.showBrand();
-        p1.turnOff();
     }
     
 }

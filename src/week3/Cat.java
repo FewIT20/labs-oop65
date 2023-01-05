@@ -1,5 +1,3 @@
-package week3;
-
 /**
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
@@ -63,20 +61,6 @@ public class Cat {
         System.out.println("Color : " + this.color);
         System.out.println("Height : " + this.height);
         System.out.println("Weight : " + this.weight);
-    }
-    
-    public static void main(String[] args) {
-        Cat cat = new Cat();
-        cat.defineCat("Mew", "White");
-        cat.speak();
-        
-        cat.upWeight(5);
-        cat.upHeight(10);
-        cat.speak();
-        
-        cat.upWeight(-5);
-        cat.upHeight(-10);
-        cat.speak();
     }
     
 }
