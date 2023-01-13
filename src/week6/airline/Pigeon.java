@@ -2,6 +2,7 @@
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
+package week6.airline;
 
 /**
  *
@@ -9,11 +10,10 @@
  */
 public class Pigeon extends Bird {
     
-    private int numberOfPigeon;
+    private static  int numberOfPigeon;
 
     public Pigeon() {
         this(0.0, 0.0, 0.0);
-        this.numberOfPigeon += 1;
     }
     
     public Pigeon(double wingSize, double weight, double height) {
