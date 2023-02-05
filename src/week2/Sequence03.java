@@ -16,7 +16,7 @@ public class Sequence03 {
         Scanner sc = new Scanner(System.in);
         int value = sc.nextInt();
         for (int i = 1; i <= value; i++) {
-            if ((i % 5) == 0) {
+            if ((i % 6) == 0) {
                 System.out.print("\n");
             } else {
                 System.out.print("|");
