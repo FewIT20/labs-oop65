@@ -2,7 +2,6 @@
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
-package week3;
 
 /**
  *
@@ -15,7 +14,7 @@ public class MyDate {
     public int year;
     
     public void showDate() {
-        System.out.println(day+ "/" +month+ "/" +year+ ".");
+        System.out.println(day+ "/" +month+ "/" +year);
     }
     
 }

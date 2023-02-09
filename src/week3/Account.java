@@ -2,7 +2,6 @@
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
-package week3;
 
 /**
  *
@@ -21,17 +20,18 @@ public class Account {
         balance = balance + b;
     }
     
-    public void withdraw(double b) {
+    public double withdraw(double b) {
         if (b < 0) {
             System.out.println("The balance variable must e greater than or equal to zero.");
-            return;
+            return 0;
         }
         if ((balance - b) < 0) {
             System.out.println("Your account balance is insufficient.");
-            return;
+            return 0;
         }
         double value = balance - b;
         balance = value;
+        return b;
     }
     
     public void showInfo() {
