@@ -2,13 +2,12 @@
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
-package week4;
 
 /**
  *
  * @author "FewPz (IG: few.pz")
  */
-public class Car extends Vechicle {
+public class Car extends Vehicle {
     
     private String typeEngine;
 
@@ -37,7 +36,7 @@ public class Car extends Vechicle {
     }
     
     public void showCarInfo() {
-        System.out.println("Car engine is " + this.typeEngine);
+        System.out.println("Car engine is " + this.typeEngine + ".");
         super.showInfo();
     }
 }

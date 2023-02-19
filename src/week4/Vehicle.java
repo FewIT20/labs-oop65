@@ -2,13 +2,12 @@
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
-package week4;
 
 /**
  *
  * @author "FewPz (IG: few.pz")
  */
-public class Vechicle {
+public class Vehicle {
     
     private int fuel;
     private String topSpeed;
@@ -30,7 +29,7 @@ public class Vechicle {
     }
     
     public void showInfo() {
-        System.out.println("Fuel is " + this.fuel + " litre and Top speed is " + topSpeed + " m/s.");
+        System.out.println("Fuel is " + this.fuel + " litre and Top Speed is " + topSpeed + " m/s.");
     }
     
 }

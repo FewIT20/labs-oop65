@@ -2,13 +2,12 @@
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
-package week4;
 
 /**
  *
  * @author "FewPz (IG: few.pz")
  */
-public class Plane extends Vechicle {
+public class Plane extends Vehicle {
     
     public void setPlaneInfo(int s, String t) {
         setFuel(s);
@@ -19,13 +18,14 @@ public class Plane extends Vechicle {
         int fuel = getFuel();
         if (fuel > 200) {
             System.out.println("Fly.");
+            setFuel(getFuel() - 200);
         } else{
             System.out.println("Please add fuel.");
         }
     }
     
     public void showPlaneInfo() {
-        System.out.println("Plane detail is, Fuel is " + getFuel() + " litre and Top speed is " + getTopSpeed() + " m/s.");
+        System.out.println("Plane detail is, Fuel is "+getFuel()+" litre and Top Speed is High m/s.");
     }
     
 }
