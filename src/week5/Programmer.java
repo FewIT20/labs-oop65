@@ -16,25 +16,15 @@ public class Programmer extends Employee {
     public void coding(String str) {
         if (getEnergy() < 30) {
             System.out.println("Error Error Error");
-            setEnergy(getEnergy() - 30);
-            this.happiness -= 30;
         } else {     
             System.out.println("Your code is " + str);
-            setEnergy(getEnergy() - 30);
-            this.happiness -= 30;
         }
+        setEnergy(getEnergy() - 30);
+        this.happiness -= 30;
     }
     
     public void coding(char str) {
-        if (getEnergy() < 30) {
-            System.out.println("Error Error Error");
-            setEnergy(getEnergy() - 30);
-            this.happiness -= 30;
-        } else {     
-            System.out.println("Your code is " + str);
-            setEnergy(getEnergy() - 30);
-            this.happiness -= 30;
-        }
+        this.coding(String.valueOf(str));
     }
 
     public int getHappiness() {
