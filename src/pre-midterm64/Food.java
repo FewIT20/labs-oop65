@@ -13,6 +13,7 @@ public abstract class Food {
     protected String name;
 
     public Food() {
+		this.name = "";
     }
 
     public void setName(String name) {

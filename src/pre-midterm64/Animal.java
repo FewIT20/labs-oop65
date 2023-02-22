@@ -15,6 +15,7 @@ public abstract class Animal {
     private int age = 0;
 
     public Animal() {
+		this(name, 0, 0);
     }
 
     public Animal(String name, int power, int age) {

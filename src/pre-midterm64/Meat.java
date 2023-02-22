@@ -11,7 +11,7 @@
 public class Meat extends Food {
 
     public Meat() {
-        this.name = "";
+        super("");
     }
 
     @Override
