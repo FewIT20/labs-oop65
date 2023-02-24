@@ -28,11 +28,6 @@ public class SeniorProgrammer extends Programmer {
         }
     }
     
-    public void coding(char str)  {
-        //Call at method coding(String str) in SeniorProgrammer but using String Object.
-        this.coding(String.valueOf(str));
-    }
-    
     public void compliment(Programmer p) {
         //Increment a happiness 5 point of attribute Programmer class. 
         System.out.println(p.getName() + " in a good mood");
