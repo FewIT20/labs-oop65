@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="week5/|week6/|week3/|practice/|week4/|pre-midterm64/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/practice"/>
+	<classpathentry kind="src" path="src/pre-midterm64"/>
+	<classpathentry kind="src" path="src/week3"/>
+	<classpathentry kind="src" path="src/week4"/>
+	<classpathentry kind="src" path="src/week5"/>
+	<classpathentry kind="src" path="src/week6"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
