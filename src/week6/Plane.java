@@ -12,7 +12,7 @@ public class Plane extends Vehicle implements Flyable {
     
     private String airline;
     private String boeing;
-    private final int MAX_FLYER;
+    private int MAX_FLYER = 2;
 
     public Plane() {
         this(0.0, "", "");
@@ -22,7 +22,6 @@ public class Plane extends Vehicle implements Flyable {
         super(fuel);
         this.airline = airline;
         this.boeing = boeing;
-        this.MAX_FLYER = 2;
     }
 
     public String getAirline() {

@@ -40,7 +40,7 @@ public class Pigeon extends Bird {
     public void fly() {
         if (getWeight() >= 5) {
             setWeight(getWeight() - 0.25);
-            System.out.println("Fly fly");
+            System.out.println("Fly Fly");
         } else {
             System.out.println("I'm hungry");
         }
