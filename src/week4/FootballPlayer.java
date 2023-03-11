@@ -1,5 +1,4 @@
-
-import week6.Player;
+package week4;
 
 /**
  * You can follow me on instagram!

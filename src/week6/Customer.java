@@ -1,3 +1,5 @@
+package week6;
+
 
 /**
  * You can follow me on instagram!

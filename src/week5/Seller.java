@@ -1,3 +1,8 @@
+package week5;
+
+
+import week5.Food;
+
 /**
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
