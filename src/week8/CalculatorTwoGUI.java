@@ -29,6 +29,7 @@ public class CalculatorTwoGUI implements ActionListener {
         text = new TextField();
         text.setEnabled(false);
         frame = new JFrame("My Calculator");
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.add(text, BorderLayout.NORTH);
         panel2.setLayout(new GridLayout(4,4));

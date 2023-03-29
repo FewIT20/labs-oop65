@@ -18,6 +18,7 @@ public class CalculatorOneGUI implements ActionListener  {
         registerButton();
         panel = new JPanel();
         frame = new JFrame("เครื่องคิดเลข");
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setSize(500, 500);
         frame.setLayout(new GridLayout(4, 0));
         panel.setLayout(new FlowLayout());
