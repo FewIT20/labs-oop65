@@ -14,7 +14,7 @@ public class Main {
 
             @Override
             public void run() {
-                new MDIFromGUI();
+                new CalculatorOneGUI();
             }
 
         });

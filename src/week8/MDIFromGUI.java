@@ -1,6 +1,7 @@
 package week8;
 
 import java.awt.*;
+import java.util.Random;
 
 import javax.swing.*;
 
@@ -21,18 +22,13 @@ public class MDIFromGUI {
         frame = new JFrame("SubMenuItem Demo");
         desktopPane = new JDesktopPane();
         desktopPane.setBackground(Color.black);
-        desktopPane.setLayout(new GridLayout(3, 1));
         desktopPane.add(createInternalFrame(internalFrame1));
         desktopPane.add(createInternalFrame(internalFrame2));
         desktopPane.add(createInternalFrame(internalFrame3));
-        desktopPane.add(new JLabel());
-        desktopPane.add(new JLabel());
-        desktopPane.add(new JLabel());
         frame.setJMenuBar(navbar);
-        frame.add(desktopPane, BorderLayout.CENTER);
+        frame.add(desktopPane);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setMinimumSize(new Dimension(300,300));
-        frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(Frame.MAXIMIZED_BOTH);
     }
@@ -68,9 +64,11 @@ public class MDIFromGUI {
     }
 
     public JInternalFrame createInternalFrame(JInternalFrame internalFrame) {
+        Random random = new Random();
         internalFrame = new JInternalFrame("Application " + (++_index), true, true, true, true);
+        internalFrame.setSize(random.nextInt(200, 500), random.nextInt(200, 500));
+        internalFrame.setLocation(random.nextInt(200, 500), random.nextInt(200, 500));
         internalFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        internalFrame.pack();
         internalFrame.setVisible(true);
         return internalFrame;
     }
