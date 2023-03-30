@@ -14,14 +14,20 @@ public class MDIFromGUI {
     private JMenu item1;
     private JMenuItem item2, item3, item4, item5, item6;
 
+    private int _index;
+
     public MDIFromGUI() {
         registerNavbar();
         frame = new JFrame("SubMenuItem Demo");
         desktopPane = new JDesktopPane();
         desktopPane.setBackground(Color.black);
+        desktopPane.setLayout(new GridLayout(3, 1));
         desktopPane.add(createInternalFrame(internalFrame1));
         desktopPane.add(createInternalFrame(internalFrame2));
         desktopPane.add(createInternalFrame(internalFrame3));
+        desktopPane.add(new JLabel());
+        desktopPane.add(new JLabel());
+        desktopPane.add(new JLabel());
         frame.setJMenuBar(navbar);
         frame.add(desktopPane, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -62,18 +68,10 @@ public class MDIFromGUI {
     }
 
     public JInternalFrame createInternalFrame(JInternalFrame internalFrame) {
-        if (internalFrame == null) internalFrame = new JInternalFrame();
-        internalFrame = new JInternalFrame("Application X", true, true, true, true);
-        internalFrame.add(new JLabel("Frame 1 contents..."));
-        internalFrame.setSize(new Dimension(500, 500));
+        internalFrame = new JInternalFrame("Application " + (++_index), true, true, true, true);
         internalFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         internalFrame.pack();
         internalFrame.setVisible(true);
-
-        int x = (int) (Math.random() * (internalFrame.getWidth()));
-        int y = (int) (Math.random() * (internalFrame.getHeight()));
-
-        internalFrame.setLocation(x, y);
         return internalFrame;
     }
 }
