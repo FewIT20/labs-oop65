@@ -1,6 +1,8 @@
 package week8;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -46,6 +48,50 @@ public class TellerGUI {
         btn2 = new JButton("Withdraw");
         btn3 = new JButton("Exit");
 
+        btn1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double num = 0;
+                try {
+                    num = Double.parseDouble(text2.getText());
+                    if (num < 0) num = 0;
+                } catch (NumberFormatException ex) {
+                    num = 0;
+                }
+                balance += num;
+                _updateBalance();
+            }
+
+        });
+
+        btn2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double num = 0;
+                try {
+                    num = Double.parseDouble(text2.getText());
+                    if (num < 0) num = 0;
+                    if (balance < num) balance = 0;
+                } catch (NumberFormatException ex) {
+                    num = 0;
+                }
+                balance -= num;
+                _updateBalance();
+            }
+        });
+
+        btn3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
         FewFont.addThaiFont(btn1, btn2, btn3);
+    }
+
+    private void _updateBalance() {
+        if (!text2.getText().isEmpty()) text2.setText("");
+        text1.setText(String.valueOf(balance));
     }
 }
