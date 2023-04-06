@@ -1,4 +1,4 @@
-package week8;
+package week9;
 
 import utils.FewFont;
 import java.awt.*;
@@ -14,16 +14,17 @@ public class TellerGUI {
     private JButton btn1, btn2, btn3;
     private JLabel label1, label2;
     private TextField text1, text2;
-
-    private double balance = 6000;
+    
+    private Account account;
 
     public TellerGUI() {
         registerButton();
+        account = new Account(0, "FewPz");
         panel1 = new JPanel();
         panel2 = new JPanel();
         label1 = new JLabel("Balance");
         label2 = new JLabel("Amount");
-        text1 = new TextField(String.valueOf(balance));
+        text1 = new TextField(String.valueOf(account.getBalance()));
         text2 = new TextField();
         text1.setEnabled(false);
         frame = new JFrame("Teller GUI");
@@ -60,7 +61,7 @@ public class TellerGUI {
                 } catch (NumberFormatException ex) {
                     num = 0;
                 }
-                balance += num;
+                account.setBalance(account.getBalance() + num);
                 _updateBalance();
             }
 
@@ -73,11 +74,13 @@ public class TellerGUI {
                 try {
                     num = Double.parseDouble(text2.getText());
                     if (num < 0) num = 0;
-                    if (balance < num) balance = 0;
+                    if (account.getBalance() < num) {
+                        return;
+                    }
                 } catch (NumberFormatException ex) {
                     num = 0;
                 }
-                balance -= num;
+                account.setBalance(account.getBalance() - num);
                 _updateBalance();
             }
         });
@@ -93,6 +96,10 @@ public class TellerGUI {
 
     private void _updateBalance() {
         if (!text2.getText().isEmpty()) text2.setText("");
-        text1.setText(String.valueOf(balance));
+        text1.setText(String.valueOf(account.getBalance()));
+    }
+    
+    public static void main(String[] args) {
+        new TellerGUI();
     }
 }

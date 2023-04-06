@@ -1,4 +1,4 @@
-package week8;
+package week9;
 
 import utils.FewFont;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 import javax.swing.*;
 
-public class CalculatorTwoGUI implements ActionListener {
+public class CalculatorSample implements ActionListener {
 
     private JFrame frame;
     private JPanel panel1, panel2;
@@ -25,10 +25,9 @@ public class CalculatorTwoGUI implements ActionListener {
     private double _num2;
     private String _operator;
 
-    public CalculatorTwoGUI() {
+    public CalculatorSample() {
         registerButton();
         text = new TextField();
-        text.setEnabled(false);
         frame = new JFrame("My Calculator");
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setLayout(new BorderLayout());
@@ -115,17 +114,23 @@ public class CalculatorTwoGUI implements ActionListener {
             }
         }
 
+        String display = text.getText();
+        display = (display != null ? display : "");
         switch (e.getActionCommand()) {
-            case "0" -> text.setText("0");
-            case "1" -> text.setText("1");
-            case "2" -> text.setText("2");
-            case "3" -> text.setText("3");
-            case "4" -> text.setText("4");
-            case "5" -> text.setText("5");
-            case "6" -> text.setText("6");
-            case "7" -> text.setText("7");
-            case "8" -> text.setText("8");
-            case "9" -> text.setText("9");
+            case "0" -> text.setText(display + "0");
+            case "1" -> text.setText(display + "1");
+            case "2" -> text.setText(display + "2");
+            case "3" -> text.setText(display + "3");
+            case "4" -> text.setText(display + "4");
+            case "5" -> text.setText(display + "5");
+            case "6" -> text.setText(display + "6");
+            case "7" -> text.setText(display + "7");
+            case "8" -> text.setText(display + "8");
+            case "9" -> text.setText(display + "9");
         }
+    }
+    
+    public static void main(String[] args) {
+        new CalculatorSample();
     }
 }
