@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class FewFont {
+    
+    public static Font addThaiFont() {
+        return new Font("TH SarabunPSK", Font.BOLD, 16);
+    }
 
     public static void addThaiFont(int styleID, int size, JButton... buttons) {
         for (JButton btn : buttons) {
