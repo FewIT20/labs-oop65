@@ -17,30 +17,28 @@ import utils.FewFont;
  */
 public class PoringConstructor {
 
-    private ArrayList<Poring> poring;
-    private JFrame frame;
-    private JButton add;
-    
-    public PoringConstructor() {
-        frame = new JFrame();
-        poring = new ArrayList<>();
-        frame.setLayout(new FlowLayout());
-        add = new JButton("Add");
-        
-        FewFont.addThaiFont(add);
-        add.addActionListener(e -> {
-            poring.add(new Poring(poring.size() + 1));
-        });
-        frame.add(add);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
-    
-    public static void main(String[] args) {
-        new PoringConstructor();
-    }
-    
-    
-    
+	private ArrayList<Poring> poring;
+	private JFrame frame;
+	private JButton add;
+
+	public PoringConstructor() {
+		frame = new JFrame();
+		poring = new ArrayList<>();
+		frame.setLayout(new FlowLayout());
+		add = new JButton("Add");
+
+		FewFont.addThaiFont(add);
+		add.addActionListener(e -> {
+			poring.add(new Poring(poring.size() + 1));
+		});
+		frame.add(add);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new PoringConstructor();
+	}
+
 }

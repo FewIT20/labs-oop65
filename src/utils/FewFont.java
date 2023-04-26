@@ -1,17 +1,18 @@
 package utils;
 
-
-
-import week8.*;
-import java.awt.*;
+import java.awt.Font;
 import java.util.ArrayList;
 
-import javax.swing.*;
+import javax.swing.JButton;
 
 public class FewFont {
     
     public static Font addThaiFont() {
         return new Font("TH SarabunPSK", Font.BOLD, 16);
+    }
+    
+    public static Font addThaiFont(int size) {
+        return new Font("TH SarabunPSK", Font.BOLD, size);
     }
 
     public static void addThaiFont(int styleID, int size, JButton... buttons) {
