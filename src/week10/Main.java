@@ -22,8 +22,9 @@ public class Main {
         } catch (WithdrawException ex) {
             System.out.println(ex.getMessage());
         } finally {
-            System.out.println("Thank you.");
+            System.out.println("Thank you. A");
         }
+        System.out.println("Thank you. B");
     }
 
 }

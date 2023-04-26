@@ -1,8 +1,10 @@
+package week3;
+
 /**
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/
  */
-package week3;
+
 
 import java.util.Scanner;
 
