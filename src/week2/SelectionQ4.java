@@ -21,6 +21,7 @@ public class SelectionQ4 {
             System.out.println("Green");
             System.out.println("Blue");
         }
+        sc.close();
         System.out.println("Red");
     }
 }

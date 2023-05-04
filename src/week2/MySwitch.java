@@ -26,6 +26,7 @@ public class MySwitch {
             default:
                 System.out.println("numbers 1-5 only");
         }
+        sc.close();
         System.out.println("Red");
     }
     

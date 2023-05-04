@@ -16,6 +16,7 @@ public class Factorial {
         Scanner sc = new Scanner(System.in);
         int value = sc.nextInt();
         System.out.println(factorial(value));
+        sc.close();
     }
 
     public static int factorial(int n) {

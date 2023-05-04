@@ -16,6 +16,7 @@ public class SquareArea {
         Scanner sc = new Scanner(System.in);
         int bound = sc.nextInt();
         System.out.println(bound * bound);
+        sc.close();
     }
     
 }

@@ -29,6 +29,7 @@ public class Banking {
             default: total = money * 1.05;
                     break;
         }
+        sc.close();
         System.out.println(total);
     }
     

@@ -20,6 +20,7 @@ public class HourAndMinToSeconds {
         int minutes = sc.nextInt();
         int seconds = (hours * 60 * 60) + (minutes * 60);
         System.out.println("Output: Secs = " + seconds);
+        sc.close();
         
     }
     

@@ -16,14 +16,15 @@ public class EvenOrDivideByThree {
         String firsted = null;
         
         while (true) {
-            Scanner sc = new Scanner(System.in);
-            int value = sc.nextInt();
-            if (firsted == null) {
-                firsted = ""+value;
-            }
-            if (((value % 2) == 0) || (value % 3) == 0) {
-                break;
-            }
+            try (Scanner sc = new Scanner(System.in)) {
+				int value = sc.nextInt();
+				if (firsted == null) {
+				    firsted = ""+value;
+				}
+				if (((value % 2) == 0) || (value % 3) == 0) {
+				    break;
+				}
+			}
         }
         System.out.println(firsted);
     }

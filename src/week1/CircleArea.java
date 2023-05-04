@@ -17,6 +17,7 @@ public class CircleArea {
         double radius = input.nextDouble();
         double area = Math.PI * radius * radius;
         System.out.println(area);
+        input.close();
     }
     
 }

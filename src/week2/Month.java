@@ -28,6 +28,7 @@ public class Month {
                 days = 28;
                 break;
         }
+        sc.close();
         System.out.println(days + " days");
     }
     

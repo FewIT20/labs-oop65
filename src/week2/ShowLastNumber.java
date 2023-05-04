@@ -22,6 +22,7 @@ public class ShowLastNumber {
             }
             last_number = value;
         }
+        sc.close();
         System.out.println(last_number);
     }
     

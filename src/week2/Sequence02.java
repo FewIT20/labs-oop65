@@ -22,7 +22,7 @@ public class Sequence02 {
                 System.out.print("|");
             }
         }
-            
+        sc.close();    
     }
     
 }

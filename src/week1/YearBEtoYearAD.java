@@ -17,6 +17,7 @@ public class YearBEtoYearAD {
         int yearTOBE = sc.nextInt();
         int yearToAD = yearTOBE - 543;
         System.out.println(yearTOBE + " = " + yearToAD + " + " + "543");
+        sc.close();
     }
     
 }

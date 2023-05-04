@@ -37,6 +37,7 @@ public class BuyItems {
             total_balance += 125.00;
             System.out.println("* DVD-Rom >>> 125.00$");
         } 
+        sc.close();
         System.out.println("====== Total price >>> " + total_balance + " ======");
     }
     

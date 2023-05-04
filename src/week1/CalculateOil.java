@@ -17,6 +17,7 @@ public class CalculateOil {
         int unit = sc.nextInt();
         int liter = 30;
         System.out.println(unit * liter);
+        sc.close();
     }
     
 }

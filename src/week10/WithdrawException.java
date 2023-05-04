@@ -10,7 +10,12 @@ package week10;
  */
 public class WithdrawException extends Exception {
 
-    public WithdrawException(String s) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4559439944463954549L;
+
+	public WithdrawException(String s) {
         super(s);
     }
     

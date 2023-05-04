@@ -27,6 +27,7 @@ public class OddAdEvenNumber {
                 odd++;
             }
         }
+        sc.close();
         System.out.println("Odd number = " + odd + " Even number = " + even);
     }
     

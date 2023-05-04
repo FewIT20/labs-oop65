@@ -20,6 +20,7 @@ public class Calculate {
         num1 = num1 + 2;
         num2 = num1 / num2;
         System.out.println("result = " + num2);
+        sc.close();
     }
     
 }

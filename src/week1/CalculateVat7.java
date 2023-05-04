@@ -17,6 +17,7 @@ public class CalculateVat7 {
         int price = sc.nextInt();
         int price_with_vat = price + (price * 7) / 100;
         System.out.println(price_with_vat);
+        sc.close();
     }
     
 }

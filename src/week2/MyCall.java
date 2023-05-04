@@ -21,6 +21,7 @@ public class MyCall {
         } else {
             System.out.println(salary * 0.05);
         }
+        reader.close();
     }
     
 }

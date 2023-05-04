@@ -22,6 +22,7 @@ public class MaxNumber {
             }
             max = Math.max(max, value);
         }
+        sc.close();
         System.out.println(max + " is maximum number");
     }
 }

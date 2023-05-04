@@ -1,9 +1,5 @@
 package week10;
 
-import week7.*;
-
-
-
 /**
  * You can follow me on instagram!
  * https://www.instagram.com/few.pz/

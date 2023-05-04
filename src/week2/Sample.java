@@ -19,6 +19,7 @@ public class Sample {
         for (int sign = 1; sign <= number; sign++) {
             System.out.print(sign);
         }
+        sc.close();
         System.out.print("+");
     }
     

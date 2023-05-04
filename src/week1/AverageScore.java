@@ -18,6 +18,7 @@ public class AverageScore {
         int y = sc.nextInt();
         int z = sc.nextInt();
         System.out.println((x+y+z)/3);
+        sc.close();
     }
     
 }

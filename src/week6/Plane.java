@@ -93,4 +93,8 @@ public class Plane extends Vehicle implements Flyable {
             System.out.println("Fuel is nearly empty.");
         }
     }
+    
+    public int getMAX_FLYER() {
+		return MAX_FLYER;
+	}
 }

@@ -32,7 +32,7 @@ public class ChatDemoController implements ActionListener, WindowListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(view.getBtn1())) {
-            DateTimeFormatter date = DateTimeFormatter.BASIC_ISO_DATE.ofPattern("yyyy/MM/dd HH:mm:ss");
+            DateTimeFormatter date = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             view.getConsole().setText(view.getConsole().getText() + date.format(LocalDateTime.now()) + ": " + view.getChatbox().getText() + "\n");
             view.getChatbox().setText("");
         } else if (e.getSource().equals(view.getBtn2())) {

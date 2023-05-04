@@ -22,6 +22,7 @@ public class Sequence03 {
                 System.out.print("|");
             }
         }
+        sc.close();
     }
     
 }

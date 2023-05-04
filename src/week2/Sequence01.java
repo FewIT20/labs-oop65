@@ -18,6 +18,7 @@ public class Sequence01 {
         for (int x = 1; x <= count; x++) {
             System.out.println("#-#-#-#-#");
         }
+        sc.close();
     }
     
 }
