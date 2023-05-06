@@ -1,13 +1,12 @@
 package test;
 
-import java.io.Closeable;
-import java.io.FileInputStream;
-
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		Closeable closeable = null;
-		AutoCloseable closeable2; 
+		Thread thread = new Thread(new PangWorker("Sila"));
+		Thread thread_2 = new Thread(new PangWorker("Balloon"));
+		thread.start();
+		thread_2.start();
 	}
 	
 	

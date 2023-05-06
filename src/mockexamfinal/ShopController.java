@@ -2,8 +2,8 @@ package mockexamfinal;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.util.Date;
 
 import javax.swing.JOptionPane;
@@ -39,40 +39,19 @@ public class ShopController implements ActionListener {
 		insertItemView.getInsert().addActionListener(this);
 		loginView.getLogin().addActionListener(this);
 
-		dashboardView.getFrame().addWindowListener(new WindowListener() {
-
+		dashboardView.getFrame().addWindowListener(new WindowAdapter() {
+			
 			@Override
 			public void windowOpened(WindowEvent e) {
-				// TODO Auto-generated method stub
 				shopModel.loadData();
 				refrashTable();
 			}
 
 			@Override
 			public void windowClosing(WindowEvent e) {
-				// TODO Auto-generated method stub
 				shopModel.saveData();
 			}
-
-			@Override
-			public void windowIconified(WindowEvent e) {
-			}
-
-			@Override
-			public void windowDeiconified(WindowEvent e) {
-			}
-
-			@Override
-			public void windowDeactivated(WindowEvent e) {
-			}
-
-			@Override
-			public void windowClosed(WindowEvent e) {
-			}
-
-			@Override
-			public void windowActivated(WindowEvent e) {
-			}
+			
 		});
 	}
 
@@ -155,7 +134,7 @@ public class ShopController implements ActionListener {
 		}
 
 		if (e.getSource().equals(dashboardView.getButtonLogout())) {
-			shopModel.saveData();
+		shopModel.saveData();
 			dashboardView.getFrame().dispose();
 			JOptionPane.showMessageDialog(null, "Logout Success");
 
@@ -174,11 +153,13 @@ public class ShopController implements ActionListener {
 		editItemView.getPrice().setText(String.valueOf(item.getPrice()));
 	}
 
+	@SuppressWarnings("deprecation")
 	private void refrashTable() {
 		JTable table = dashboardView.getTable();
 		((DefaultTableModel) table.getModel()).setRowCount(0);
 		for (Item item : shopModel.getItems()) {
-			Object[] data = { item.getId(), item.getName(), item.getPrice(), item.getCreated_on() };
+			String format = item.getCreated_on().getDay() + "/" + (item.getCreated_on().getMonth() + 1) + "/" + (item.getCreated_on().getYear() + 1900);
+			Object[] data = { item.getId(), item.getName(), item.getPrice(), format };
 			((DefaultTableModel) table.getModel()).addRow(data);
 		}
 	}
