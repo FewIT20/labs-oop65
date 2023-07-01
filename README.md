@@ -1,5 +1,5 @@
-# OOP - Java
-This repository consists of codes of "Object oriented programming (OOP)" subject, School of Information Techonology, King Mongkut's Institute of Technology Ladkrabang (KMITL).
+# DSC - MySQL
+This repository consists of codes of "Database System Concepts (DSC)" subject, School of Information Techonology, King Mongkut's Institute of Technology Ladkrabang (KMITL).
 
 
 _____
